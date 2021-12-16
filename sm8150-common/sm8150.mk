@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Inherit proprietary blobs
-$(call inherit-product, vendor/lge/sm8150-common/sm8150-common-vendor.mk)
-
 COMMON_PATH := device/lge/sm8150-common
 
 # Board
@@ -244,7 +241,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system \
@@ -467,9 +463,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # TextClassifier

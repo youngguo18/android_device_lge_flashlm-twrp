@@ -29,4 +29,3 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 VENDOR_SECURITY_PATCH := 2021-08-01
 
 # inherit from the proprietary version
--include vendor/lge/flashlmdd/BoardConfigVendor.mk

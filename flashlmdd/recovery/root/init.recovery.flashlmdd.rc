@@ -32,6 +32,9 @@ on init
     # checker programs.
     mkdir /dev/fscklogs 0770 root system
 
+on post-fs
+    start boot-hal-1-0
+    
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice

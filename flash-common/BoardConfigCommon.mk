@@ -33,4 +33,4 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 107715436544
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # inherit from the proprietary version
--include vendor/lge/flashlmdd/BoardConfigVendor.mk
+-include vendor/lge/flashlm/BoardConfigVendor.mk

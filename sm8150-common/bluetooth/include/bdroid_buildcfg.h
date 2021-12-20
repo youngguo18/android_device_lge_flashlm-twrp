@@ -41,7 +41,7 @@ typedef struct {
 } device_t;
 
 static const device_t devices[] = {
-    {"flashlmdd", "LM-V500N"},
+    {"flashlm", "LM-V450"},
 };
 
 static inline const char *BtmGetDefaultName()

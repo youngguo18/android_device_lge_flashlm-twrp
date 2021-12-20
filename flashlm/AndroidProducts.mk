@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,20 +14,9 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/lge/flashlmdd
+PRODUCT_MAKEFILES += \
+    $(LOCAL_DIR)/twrp_flashlm.mk
 
-# inherit from common v50
--include device/lge/flash-common/BoardConfigCommon.mk
-
-# Extras
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=flashlmdd
-
-# Recovery
-BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_NO_RECOVERY := true
-
-# Treble
-#DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+COMMON_LUNCH_CHOICES := \
+    twrp_flashlm-userdebug \
+    twrp_flashlm-eng

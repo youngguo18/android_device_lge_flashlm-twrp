@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="flashlmdd"
+FDEVICE="flashlm"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -38,8 +38,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
-	export TARGET_DEVICE_ALT="flashlmdd"
-	export OF_TARGET_DEVICES="flashlmdd"
+	export TARGET_DEVICE_ALT="flashlm"
+	export OF_TARGET_DEVICES="flashlm"
 	export OF_VIRTUAL_AB_DEVICE=1
 	export OF_AB_DEVICE=1
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"

@@ -1,8 +1,8 @@
 # mount point		fstype	device					device2				flags
 # Boot
 /boot				emmc	/dev/block/bootdevice/by-name/boot			flags=slotselect
-/dtbo				emmc	/dev/block/bootdevice/by-name/dtbo			flags=slotselect;backup=1;display="DTBO"
-/vbmeta		         	emmc	/dev/block/bootdevice/by-name/vbmeta		flags=slotselect;backup=1;display="VBMETA"
+/dtbo				emmc	/dev/block/bootdevice/by-name/dtbo			flags=slotselect;backup=1;display="DTBO";flashimg=1
+/vbmeta		         	emmc	/dev/block/bootdevice/by-name/vbmeta		flags=slotselect;backup=1;display="VBMETA";flashimg=1
 
 # System
 /system				ext4	/dev/block/bootdevice/by-name/system		flags=slotselect;display="System";backup=1

@@ -19,13 +19,15 @@ DEVICE_PATH := device/lge/flashlmdd
 # inherit from common v50
 -include device/lge/flash-common/BoardConfigCommon.mk
 
+# Extras
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hardware=flashlmdd
 
 # Recovery
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
 
-# Security Patch Level
-VENDOR_SECURITY_PATCH := 2021-08-01
-
-# inherit from the proprietary version
+# Treble
+#DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml

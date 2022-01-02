@@ -5,9 +5,9 @@
 /vbmeta		         	emmc	/dev/block/bootdevice/by-name/vbmeta		flags=slotselect;backup=1;display="VBMETA";flashimg=1
 
 # System
-/system_root            ext4     /dev/block/bootdevice/by-name/system           flags=slotselect;backup=0
+/system_root			ext4	/dev/block/bootdevice/by-name/system		flags=slotselect;display="System";backup=1;wipeingui
 /system_image		emmc	/dev/block/bootdevice/by-name/system		flags=slotselect;flashimg=1
-/vendor				ext4	/dev/block/bootdevice/by-name/vendor		flags=slotselect;display="Vendor";backup=1
+/vendor				ext4	/dev/block/bootdevice/by-name/vendor		flags=slotselect;display="Vendor";backup=1;wipeingui
 /vendor_image		emmc	/dev/block/bootdevice/by-name/vendor		flags=slotselect;flashimg=1
 /product			ext4	/dev/block/bootdevice/by-name/product		flags=slotselect;display="Product";backup=1
 /product_image		emmc	/dev/block/bootdevice/by-name/product		flags=slotselect;flashimg=1
